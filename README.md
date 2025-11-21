@@ -26,16 +26,6 @@ Supports both local (Ollama) and cloud (Groq) LLM backends; can switch modes fro
 How it works (high level)
 
 
-Streamlit — lightweight web UI to interact with the app.
-Python 3.9+ — core application language.
-Ollama — local LLM runtime to run supported models on the user’s machine (private, offline-capable).
-Groq (cloud inference) — fast cloud inference for supported models (low latency). Check provider docs for current usage terms/pricing.
-Requests / HTTP client — to call Groq endpoints (if using cloud mode).
-dotenv (python-dotenv) — load environment variables (API keys, mode).
-pandas — to transform and export structured data (CSV, DataFrame).
-jsonschema or simple validation utilities — for validating extracted JSON output.
-Optional: tiktoken or tokenizer libs — for chunking/optimizing prompts for model token limits.
-Basic architecture
 
 **Streamlit UI** -> Controller -> Backend Adapter (OllamaAdapter or GroqAdapter) -> LLM -> Normalizer/Validator -> Results UI / Export
                 Environment & setup (example)
@@ -56,7 +46,8 @@ Basic architecture
   pip install -r requirements.txt
   (requirements.txt might include: streamlit, requests, python-dotenv, pandas, jsonschema)
   
-  Running the app
+  **Running the app**
+  
   Start Ollama locally if using local mode (follow Ollama instructions).
   streamlit run app.py
   Open the displayed Streamlit URL, paste text, choose profile, and click Extract.
