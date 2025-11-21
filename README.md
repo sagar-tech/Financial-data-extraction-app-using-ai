@@ -12,7 +12,8 @@ Built with Streamlit for the user interface, and uses local and cloud LLM infere
 Users paste or upload text, click Extract, and receive structured outputs (JSON / CSV-ready) containing the requested financial fields (revenue, net income, EPS, assets, liabilities, dates, currencies, notes, etc.).
 Key points
 
-Low friction: users only provide the text to analyze — no manual tagging or complex setup required.
+**Low friction:**
+users only provide the text to analyze — no manual tagging or complex setup required.
 Hybrid inference: run LLMs locally with Ollama and/or use Groq’s cloud inference for fast responses.
 Designed to be usable with free/open-source tooling; verify licensing/pricing and API limits for your deployment.
 Features
@@ -40,6 +41,8 @@ Basic architecture
                 Environment & setup (example)
 
 **Prerequisites**
+
+
   Python 3.9+
   pip
   For Ollama: install Ollama and pull a model (follow Ollama docs for installation and model setup).
